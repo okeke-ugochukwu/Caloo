@@ -44,59 +44,70 @@
         
         <div class="container">
             <div class="display">
-                <div class="display-grid-item">
-                    <div class="sub_display" id="active-calc">
+                
+                    <div class="display_item">
+                        <div class="sub_display" id="active-calc">
+                     
+                        </div>
+                        <div class="sub_display" id="result">
+                         
+                        </div>
                     </div>
-                    <div class="sub_display" id="result">
-                    </div>
-                </div>
             </div>
 
             <div class="buttons">
                 <div class="buttons-grid-box" id="grid-box-1">
-                    <div class="buttons-grid-item"><input type="submit" value="C" id="reset"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="&#37;"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="&#247;"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="&Cross;"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="7" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="8" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="9" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="&minus;"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="4" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="5" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="6" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="&plus;"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="1" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="2" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="3" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="&lt;"></div>
-                    <div class="buttons-grid-item"><div class="number" id="special" >S</div></div>
-                    <div class="buttons-grid-item"><input type="submit" value="0" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="." class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="&#61;" id="equals-sign"></div>
+                    <div class="buttons-grid-item"><button type="text" value="C" id="reset" readonly>C</button></div>
+                    <div class="buttons-grid-item"><button  value="/100">&#37;</button></div>
+                    <div class="buttons-grid-item"><button  value="/">&#247;</button></div>
+                    <div class="buttons-grid-item"><button  value="*">&Cross;</button></div>
+                    <div class="buttons-grid-item"><button  value="7" class="number">7</button></div>
+                    <div class="buttons-grid-item"><button  value="8" class="number">8</button></div>
+                    <div class="buttons-grid-item"><button  value="9" class="number">9</button></div>
+                    <div class="buttons-grid-item"><button  value="-">&minus;</button></div>
+                    <div class="buttons-grid-item"><button  value="4" class="number">4</button></div>
+                    <div class="buttons-grid-item"><button  value="5" class="number">5</button></div>
+                    <div class="buttons-grid-item"><button  value="6" class="number">6</button></div>
+                    <div class="buttons-grid-item"><button  value="+">&plus;</button></div>
+                    <div class="buttons-grid-item"><button  value="1" class="number">1</button></div>
+                    <div class="buttons-grid-item"><button  value="2" class="number">2</button></div>
+                    <div class="buttons-grid-item"><button  value="3" class="number">3</button></div>
+                    <div class="buttons-grid-item"><input type="text" id="backspace" value="<" readonly>&lt;</input></div>
+                    
+                    <!--When developing the next update, this div would be the link to the special operations buttons-->
+                    <!-- <div class="buttons-grid-item"><div class="number" id="special">S</div></button></div> -->
+
+                    <div class="buttons-grid-item"><input type="text" value="A" class="number" id="active_answer" readonly></div>
+                    <div class="buttons-grid-item"><button  value="0" class="number">0</button></div>
+                    <div class="buttons-grid-item"><button  value="." class="number">.</button></div>
+                    <div class="buttons-grid-item"><input type="text" value="&#61;" id="equals-sign" readonly></div>
                 </div>
 
+                <div class="active_values">
+
+                </div>
+                <!--This would be the special operation buttons-->
                 <div class="buttons-grid-box" id="grid-box-2">
-                    <div class="buttons-grid-item"><input type="submit" value="-" id="reset"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-"></div>
+                    <div class="buttons-grid-item"><button  value="-" id="reset"></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
                     <div class="buttons-grid-item"><div class="number" id="special-2">-</div></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" class="number"></div>
-                    <div class="buttons-grid-item"><input type="submit" value="-" id="equals-sign"></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" id="equals-sign"></button></div>
                 </div>
             </div>
         </div>
