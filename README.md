@@ -1,5 +1,7 @@
 # Caloo
 Javascript Calculator App
 
-Work in Progress. Will take some time on this one. 
-Trying to fully internalize some concepts
+V1.0 done!
+V2.0 coming.
+ - Special operations
+ - CSS effects
