@@ -17,10 +17,11 @@ $("button").click(function () {
     var buttonLabel = this.innerHTML;
     $("#active-calc").append(buttonLabel);
 
-    var buttonValue = this.value; //this is just for the display
-    $(".active_values").append(buttonValue)
+    var buttonValue = this.value;              //this is just for the display
+    $(".active_values").append(buttonValue);
 
-    var activeValues = $(".active_values").html(); //this are the actual values being used in calculation, hidden div in html
+    var activeValues = $(".active_values").html();              //this are the actual values being used in calculation, hidden div in html
+    console.log(activeValues)
     localStorage.setItem("activeValues", activeValues);
 
 })
@@ -72,9 +73,14 @@ $("#backspace").click(function(){
     var valuesOnDisplay = $("#active-calc").html();             // get text on display
     var valuesActual =  $(".active_values").html();          // get actual values from hidden div
 
-    var newDisplayValues = valuesOnDisplay.toString().slice(0, -1);                   // remove last character from text on display and create new text
-    var newActualValues = valuesActual.toString().slice(0, -1);                 // remove last character from actual values       " "     " "     " "  
+    var newDisplayValues = valuesOnDisplay.toString().slice(0, -1);                      // remove last character from text on display and create new text
+    var newActualValues = newDisplayValues;                                         // set the values on dislay as new  actual values;
+    
+    
+    //at this point, values on display and values in hidden div are the same.
+    console.log(newActualValues);
 
+    
     $("#active-calc").html(newDisplayValues);                        // input new text in display
     $(".active_values").html(newActualValues);                  //input new values in hidden div
 
