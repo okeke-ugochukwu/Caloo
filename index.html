@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> App  </title>
+
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <meta name="description" content="Javascript Calculator">
+        <meta name="keywords" content="Jascript, Calculator, App, WebApp, Okeke, Ugochukwu, okeke-ugochukwu, Github">
+        <meta name="theme-color" content="#3C1687">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Open Graph data-->
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="App"/>
+        <meta property="og:description" content="Javascript Calculator"/>
+        <meta property="og:url" content="https://okeke-ugochukwu.github.io/Caloo"/>
+        <meta property="og:image" content="https://raw.githubusercontent.com/okeke-ugochukwu/Caloo/main/img/og-image.png"/>
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="600"/>
+        <meta property="og:image:alt" content="| Website Image Snippet"/>
+        <meta name="robots" content="follow, index">
+
+        <!--Twitter Cards-->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="App">
+        <meta name="creator" content="@pianomann_">
+        <meta name="twitter:description" content="Javascript Calculator">
+        <meta name="twitter:url" content="https://okeke-ugochukwu.github.io/Caloo/">
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/okeke-ugochukwu/Caloo/main/img/og-image.png">
+
+
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="display">
+
+                    <div class="display_item">
+                        <div class="sub_display" id="active-calc">
+
+                        </div>
+                        <div class="sub_display" id="result">
+
+                        </div>
+                    </div>
+            </div>
+
+            <div class="buttons" >
+                <div class="buttons-grid-box" id="grid-box-1" >
+                    <div class="buttons-grid-item"><button type="text" value="C" id="reset" readonly>C</button></div>
+                    <div class="buttons-grid-item"><button  value="/100" id="percent">&#37;</button></div>
+                    <div class="buttons-grid-item"><button  value="/">&#247;</button></div>
+                    <div class="buttons-grid-item"><button  value="*">&Cross;</button></div>
+                    <div class="buttons-grid-item"><button  value="7" class="number">7</button></div>
+                    <div class="buttons-grid-item"><button  value="8" class="number">8</button></div>
+                    <div class="buttons-grid-item"><button  value="9" class="number">9</button></div>
+                    <div class="buttons-grid-item"><button  value="-">&minus;</button></div>
+                    <div class="buttons-grid-item"><button  value="4" class="number">4</button></div>
+                    <div class="buttons-grid-item"><button  value="5" class="number">5</button></div>
+                    <div class="buttons-grid-item"><button  value="6" class="number">6</button></div>
+                    <div class="buttons-grid-item"><button  value="+">&plus;</button></div>
+                    <div class="buttons-grid-item"><button  value="1" class="number">1</button></div>
+                    <div class="buttons-grid-item"><button  value="2" class="number">2</button></div>
+                    <div class="buttons-grid-item"><button  value="3" class="number">3</button></div>
+                    <div class="buttons-grid-item"><input type="text" id="backspace" value="<" readonly>&lt;</input></div>
+
+                    <!--When developing the next update, this div would be the link to the special operations buttons-->
+                    <!-- <div class="buttons-grid-item"><div class="number" id="special">S</div></button></div> -->
+
+                    <div class="buttons-grid-item"><input type="text" value="A" class="number" id="active_answer" readonly></div>
+                    <div class="buttons-grid-item"><button  value="0" class="number">0</button></div>
+                    <div class="buttons-grid-item"><button  value="." class="number">.</button></div>
+                    <div class="buttons-grid-item"><input type="text" value="&#61;" id="equals-sign" readonly></div>
+                </div>
+
+                <div class="active_values">
+
+                </div>
+                <!--This would be the special operation buttons-->
+                <div class="buttons-grid-box hidden" id="grid-box-2" >
+                    <div class="buttons-grid-item"><button  value="-" id="reset"></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">sin<sup>-1</sup></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">sin</button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">deg</button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">cos<sup>-1</sup></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">cos</button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">log</button></div>
+                    <div class="buttons-grid-item"><button  value=""></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">tan<sup>-1</sup></button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">tan</button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">e<sup>x</sup></button></div>
+                    <div class="buttons-grid-item"><button  value="-"></button></div>
+                    <div class="buttons-grid-item"><div class="number" id="special-2">-</div></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number">&radic;</button></div>
+                    <div class="buttons-grid-item"><button  value="-" class="number"></button></div>
+                    <div class="buttons-grid-item"><button  value="-" id="equals-sign"></button></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

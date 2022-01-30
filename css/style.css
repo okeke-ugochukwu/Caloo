@@ -1,0 +1,123 @@
+*:focus {
+    outline: none;
+}
+*:focus {
+    outline: none;
+}
+body {
+    background: #3C1687;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+.container {
+    width: 100%;
+    max-width: 350px;
+    min-width: 300px;
+    height: 100%;
+    max-height: 600px;
+    min-height: 600px;
+    overflow: none;
+    border-radius: 30px;
+    background: #6E3DD5;
+}
+.display {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    overflow: hidden;
+}
+.display_item {
+    width: 100%;
+}
+.sub_display {
+    margin:auto;
+    max-width: 90%;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: 21px;
+}
+#result {
+    color: white;
+    font-size: 33px;
+    margin-top: 10px;
+    max-width: 80%;
+}
+#active-calc {
+    color: #BC9CF1;
+}
+.buttons {
+    height: 60%;
+    background: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons-grid-box {
+    width: 85%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    grid-template-rows: repeat(5, 18%);
+    justify-content: space-between;
+    align-content: space-between;
+    transition: .5s;
+}
+.hidden {
+    display: none;
+}
+.buttons-grid-item {
+    border-radius: 20px;
+    overflow: hidden;
+}
+button, input, #special, #special-2{
+   width: 100%;
+   height: 100%;
+   padding: 0;
+   border: none;
+   font-size: 25px;
+   background: #E6E7E9;
+   transition: .3s;
+}
+input {
+    text-align: center;
+}
+button:hover, input:hover {
+    background: #d3d3d3;
+}
+#special, #special-2 {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+.number {
+    color: #858688;
+}
+.number:hover {
+    color: #727274;
+}
+#reset {
+    background: #FA386C;
+    color: white;
+}
+#reset:hover {
+    background: #f3295f ;
+}
+#equals-sign {
+    background: #32BF1B;
+    color: white;
+}
+#equals-sign:hover {
+    background: #27a713;
+}
+.active_values {
+    display: none;
+}
+#active_answer {
+    font-weight: 100;
+}
